@@ -1,0 +1,77 @@
+body {
+    background: #001122;
+}
+
+.page-wrapper {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+p:first-child {
+    margin-top: 0;
+}
+
+custom-accordion {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+}
+
+details {
+    --curtain-border-color: #334455;
+    --curtain-background-color: #223344;
+    --curtain-color: #FFFFFF;
+
+    position: relative;
+    max-width: 30rem;
+    overflow: hidden;
+    border: 1px solid var(--curtain-border-color);
+    color: var(--curtain-color);
+}
+
+summary {
+    position: relative;
+    display: block;
+    padding: 1rem 3.5rem 1rem 1rem;
+    background: var(--curtain-background-color);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary:focus {
+    outline: none;
+    box-shadow: inset 0 0 0.25em 0.125em #08F;
+}
+
+summary:after {
+    content: '';
+    position: absolute;
+    top: 1.375rem;
+    right: 1rem;
+    
+    display: inline-block;
+    vertical-align: top;
+    width: 0;
+    height: 0;
+
+    border: 0.5rem solid transparent;
+    border-top-color: #FFFFFF;
+    border-bottom-width: 0;
+    
+    transition: transform 0.5s;
+}
+
+details[open] summary:after {
+    transform: rotateX(180deg);
+}
+
+.curtain__content {
+    padding: 1rem;
+}
