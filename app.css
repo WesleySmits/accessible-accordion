@@ -5,7 +5,7 @@ body {
 .page-wrapper {
     max-width: 50rem;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 3rem 3vw;
 }
 
 p {
